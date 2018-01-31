@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "~/Views/Shared/_ModuleLayout.cshtml";
+}
+
+<div class="module">
+    <div class="title">
+        <h3>Where do I fit in?</h3>
+        <h1>Audit score</h1>
+    </div>
+
+    <div class="section">
+        <p>
+            The AUDIT questionnaire was developed by the WHO to evaluate a person’s use of alcohol. The AUDIT score
+            shows when a person’s drinking might start to become a problem. Higher scores usually mean serious
+            problems. The following chart is in the shape of a pyramid to show that there are more people with low AUDIT
+            scores than high ones. Where do you fit in? Your AUDIT score is @ViewBag.auditScore. Hover over the
+            labels to see what each score represents. The chart will show where your score falls.
+        </p>
+        <div class="clearfix">
+            <div class="col-xs-3">
+                <img src="~/Content/Images/orange-cup.png" alt="Wine Glass" width="180" />
+            </div>
+            <div class="col-xs-3">
+                <img src="~/Content/Images/orange-bottle.png" alt="Beer Bottle" width="180" />
+            </div>
+            <div class="col-xs-3">
+                <img src="~/Content/Images/orange-person-with-book.png" alt="Person with book" width="180" />
+            </div>
+            <div class="col-xs-3">
+                <img src="~/Content/Images/orange-brain-head.png" alt="Brain" width="180" />
+            </div>
+        </div>
+    </div>
+
+    <a href="@Url.Action("Module5")">Click to continue</a>
+</div>

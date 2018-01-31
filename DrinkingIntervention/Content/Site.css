@@ -1,0 +1,754 @@
+﻿/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-top: 1px solid #ddd;
+    height: 50px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* survey */
+/*
+div.survey, div.survey h1, div.survey h2, div.survey h3 {
+    font-family:Courier New, Courier, monospace;
+}
+*/
+div.survey {
+    margin-bottom: 90px;
+}
+
+div.survey .survey-content {
+    max-width: 990px !important;
+    margin: auto;
+}
+
+div.survey p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+div.survey .drink-calendar input {
+    max-width: 75px;
+    margin: auto;
+}
+
+div.survey h1 {
+    background-color: #0074D9;
+    color: #fff;
+    font-weight: 700;
+    padding: 50px;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+div.survey h2 {
+    background-color: #0074D9;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+
+div.survey h3 {
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.phoneNumber {
+    margin: 20px auto;
+}
+
+div.survey .next-link {
+    display: block;
+    width: 400px;
+    margin: 30px auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+div.survey .yesnotable {
+    width: 80%;
+}
+
+    div.survey .yesnotable thead {
+        background-color: #0074D9;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    div.survey .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #e0effc;
+}
+
+.btn-primary {
+    background-color: #0074D9;
+}
+
+div.survey .drink-calendar thead tr th, div.survey h1 {
+    text-align: center;
+}
+
+div.survey .stretch-radios .radio {
+    margin-right: 15px;
+}
+
+
+div.survey dd {
+    font-size: 14px;
+}
+
+div.survey dt {
+    font-size: 16px;
+}
+
+div.survey h1.final-title {
+    width: 100%;
+}
+
+/* modules */
+
+div.module {
+    margin-bottom: 50px;
+    min-width: 1000px !important;
+}
+
+div.module .gender img {
+    width: 20%;
+}
+
+div.module table {
+    background-color: #fff;
+    max-width: 60%;
+    margin: 20px auto 10px auto;
+}
+
+div.survey-content table {
+    margin-bottom: 40px;
+}
+
+div.module h1.aveDrinks img {
+    display: inline;
+    vertical-align: bottom;
+}
+
+
+div.module img {
+    display: block;
+    margin-right: auto;
+    margin-left:auto;
+    max-width: 100%;
+    height: auto;
+}
+
+div.module .section {
+    padding: 30px;
+    min-height: 420px
+}
+
+div.module .section p {
+    font-size: 1.5em;
+    line-height: 34px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+div.module .section h1 {
+    font-size: 7em;
+    font-family: serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+div.module .section h2 {
+    font-weight: 600;
+    font-size: 2.8em;
+    margin-top: 60px;
+    margin-bottom: 25px;
+}
+
+div.module .section h3 {
+    text-align: center;
+    font-size: 2.4em;
+    line-height: 1.6em;
+}
+
+div.module .section h4 {
+    font-size: 2.2em;
+    line-height: 1.4em;
+    margin-bottom: 30px;
+}
+
+div.module .section .col-xs-6 {
+    margin: 0;
+}
+
+div.module .title h3, div.module .title h1, div.module .section h2 {
+    text-transform:uppercase;
+    text-align: center;
+}
+
+div.module .title h3 {
+    font-size: 3.5em;
+}
+
+div.module .title h1 {
+    font-size: 5em;
+    font-weight: 700;
+}
+
+div.module .title {
+    padding: 5em;
+    color: #fff;
+    background-color: #e25446;
+}
+
+.light-orange {
+    background-color: #fbe4e4;
+}
+
+.orange {
+    background-color: #e25446;
+}
+
+.grey {
+    background-color: #d9d9d9;
+}
+
+div.module .circle {
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    background-color: #e25446;
+    line-height: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 5em;
+    font-weight: 600;
+}
+/*
+div.module .pyramid {
+    position: relative;
+}
+*/
+div.module .pyramid div {
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+div.module .pyramid img {
+    width: 450px;
+    float: right;
+}
+
+
+div.module .pyramid .labels img {
+    display: inline;
+    height: 1em;
+    margin: 0 20px;
+    width: 6%;
+    float: none;
+}
+
+div.module .pyramid .labels h1.selected {
+    text-decoration: underline;
+    color: #000;
+}
+
+div.module .pyramid .labels h1 {
+    margin-bottom: 29px;   
+    text-transform: capitalize;
+    font-size: 3em;
+    color: #555;
+    width: 320px;
+}
+div.module .pyramid .labels h1:hover {
+    text-decoration: underline;
+    cursor: help;
+}
+
+
+div.module .infobox {
+    border: 3px solid #e25446;
+    background-color: #fff;
+    position: absolute !important;
+    width: 400px !important;
+    padding: 10px;
+    right: 390px;
+}
+
+div.module .high.infobox {
+    top: 75px;
+}
+
+div.module .medium.infobox {
+    top: 155px
+}
+
+div.module .low.infobox {
+    top: 220px;
+}
+
+div.module .noprob.infobox {
+    top: 290px;
+}
+
+div.module .shield {
+    position: relative;
+    min-height: 200px;
+}
+
+div.module .shield h1 {
+    font-size: 6em;
+}
+
+div.module .bac-values .circle {
+    cursor: pointer;
+    font-weight: 100;
+}
+
+div.module .bac-values .selected {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.js-bac-description {
+    width: 75%;
+    margin: 50px auto;
+}
+
+.js-bac-desc-image img {
+    width: 20%;
+}
+
+div.module .shield img {
+    position: absolute;
+    top: 55px;
+    width: 200px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: -5;
+}
+div.module a {
+    display: block;
+    width: 100%;
+    background-color: #e25446;
+    height: 65px;
+    line-height: 65px;
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-top:50px;
+    
+}
+
+div.module a:hover {
+    text-decoration: none;
+}
+
+.module h3 a {
+    display: inline;
+    background-color: inherit;
+    color: #e25446;
+    height: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    text-align: inherit;
+}
+
+.module h3 a:hover {
+    text-decoration: underline;
+}
+
+div.module .clearfix .col-xs-3 img {
+    width: 50%;
+}
+
+div.module .bottleboxes {
+    position: relative;
+}
+
+div.module .bottlebox1,
+div.module .bottlebox2,
+div.module .bottlebox3,
+div.module .bottlebox4,
+div.module .bottlebox5,
+div.module .bottlebox6,
+div.module .bottlebox7
+ {
+    position: absolute;
+    font-size: 1.3em;
+    width: 160px;
+    text-align: center;
+}
+
+div.module .bottlebox1 img,
+div.module .bottlebox2 img,
+div.module .bottlebox3 img,
+div.module .bottlebox4 img,
+div.module .bottlebox5 img,
+div.module .bottlebox6 img,
+div.module .bottlebox7 img
+ {
+    width: 100px;
+    z-index: 100;
+    position: relative;
+}
+
+div.module .bottlebox1 {
+    top: 0;
+    left: 10%;
+}
+
+div.module hr.bottlebox1 {
+    top: 25px;
+    width: 28%;
+    left: 20%
+}
+
+div.module .bottlebox2 {
+    top: 20%;
+    left: 25%
+}
+
+div.module hr.bottlebox2 {
+    top: 150px;
+    width: 18%;
+    left: 30%;
+}
+
+div.module .bottlebox3 {
+    top: 45%;
+    left: 10%;
+}
+
+div.module hr.bottlebox3 {
+    top: 305px;
+    width: 28%;
+    left: 20%;
+}
+
+div.module .bottlebox4 {
+    top: 75%;
+    left: 20%
+}
+
+div.module hr.bottlebox4 {
+    top: 490px;
+    width: 18%;
+    left: 30%;
+}
+
+div.module .bottlebox5 {
+    top: 5%;
+    right: 20%;
+}
+
+div.module hr.bottlebox5 {
+    top: 55px;
+    width: 23%;
+    right: 25%;
+}
+
+div.module .bottlebox6 {
+    top: 45%;
+    right: 15%;
+}
+
+div.module hr.bottlebox6 {
+    top: 305px;
+    width: 24%;
+    right: 24%;
+}
+
+div.module .bottlebox7 {
+    top: 80%;
+    right: 15%;
+}
+
+div.module hr.bottlebox7 {
+    top: 525px;
+    width: 28%;
+    right: 20%;
+}
+
+div.module hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 7px solid #fff;
+    margin: 1em 0;
+    padding: 0;
+    z-index: 0;
+}
+
+div.module .big_person {
+    position: relative;
+}
+
+div.module .big_person img {
+    width: 250px;
+}
+
+div.module .big_person div.infobox1 {
+    top: 5%;
+}
+div.module .big_person div.infobox2 {
+    top: 25%;
+}
+div.module .big_person div.infobox3 {
+    top: 30%;
+    left: 10%;
+}
+div.module .big_person div.infobox4 {
+    top: 43%;
+}
+div.module .big_person div.infobox5 {
+    top: 70%;
+    left: 15%;
+}
+div.module .big_person div.infobox6 {
+    top: 5%;
+    right: 10%;
+}
+div.module .big_person div.infobox7 {
+    top: 10%;
+    right: 0;
+}
+div.module .big_person div.infobox8 {
+    top: 30%;
+    right: 10%;
+}
+div.module .big_person div.infobox9 {
+    top: 40%;
+    right: 0;
+}
+div.module .big_person div.infobox10 {
+    top: 80%;
+    right: 15%;
+}
+
+
+div.module .big_person .infobox1 img,
+div.module .big_person .infobox2 img,
+div.module .big_person .infobox3 img,
+div.module .big_person .infobox4 img,
+div.module .big_person .infobox5 img,
+div.module .big_person .infobox6 img,
+div.module .big_person .infobox7 img,
+div.module .big_person .infobox8 img,
+div.module .big_person .infobox9 img,
+div.module .big_person .infobox10 img {
+    width: 50%;
+    z-index: 100;
+    position: relative;
+}
+
+div.module .big_person .infobox1 img:hover,
+div.module .big_person .infobox2 img:hover,
+div.module .big_person .infobox3 img:hover,
+div.module .big_person .infobox4 img:hover,
+div.module .big_person .infobox5 img:hover,
+div.module .big_person .infobox6 img:hover,
+div.module .big_person .infobox7 img:hover,
+div.module .big_person .infobox8 img:hover,
+div.module .big_person .infobox9 img:hover,
+div.module .big_person .infobox10 img:hover {
+    cursor: pointer;
+}
+
+div.module .big_person .infobox1, 
+div.module .big_person .infobox2, 
+div.module .big_person .infobox3, 
+div.module .big_person .infobox4, 
+div.module .big_person .infobox5, 
+div.module .big_person .infobox6, 
+div.module .big_person .infobox7, 
+div.module .big_person .infobox8, 
+div.module .big_person .infobox9, 
+div.module .big_person .infobox10 {
+    position: absolute;
+}
+
+
+
+div.module ul.tips {
+    width: 800px;
+    font-size: 1.8em;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+
+div.module ul.tips li {
+    background: url('Images/tick.png') left top no-repeat; 
+    padding-left: 120px;
+    padding-bottom: 30px 
+}
+
+div.module .three_people div {
+    width: 250px;
+    margin: auto;
+}
+
+div.module .three_people img {
+    display: inline;
+}
+
+div.module hr.infobox1 {
+    top: 60px;
+    width: 39%;
+    left: 8.5%
+
+}
+
+div.module hr.infobox2 {
+    top: 200px;
+    width: 39%;
+    left: 9%;
+}
+
+div.module hr.infobox3 {
+    top: 235px;
+    width: 34%;
+    left: 16%;
+}
+
+div.module hr.infobox4 {
+    top: 320px;
+    width: 39%;
+    left: 9%;
+}
+
+div.module hr.infobox5 {
+    top: 510px;
+    width: 25%;
+    left: 22%;
+}
+
+div.module hr.infobox6 {
+    top: 69px;
+    width: 30%;
+    right: 18%;
+}
+
+div.module hr.infobox7 {
+    top: 95px;
+    width: 44%;
+    right: 6%;
+}
+
+div.module hr.infobox8 {
+    top: 230px;
+    width: 32%;
+    right: 16%;
+}
+
+div.module hr.infobox9 {
+    top: 300px;
+    width: 43%;
+    right: 6%;
+}
+
+div.module hr.infobox10 {
+    top: 585px;
+    width: 26%;
+    right: 21%;
+}
+
+div.module p.infobox1,
+div.module p.infobox2,
+div.module p.infobox3,
+div.module p.infobox4,
+div.module p.infobox5,
+div.module p.infobox6,
+div.module p.infobox7,
+div.module p.infobox8,
+div.module p.infobox9,
+div.module p.infobox10
+ {
+    position: absolute;
+    width: 250px;
+    z-index: 150;
+    border: 3px solid #e25446;
+    background-color: #fff;
+}
+
+div.module p.infobox1 {
+    top: 5%;
+    left: 14%;
+}
+
+div.module p.infobox2 {
+    top: 20%;
+    left: 14%;
+}
+
+div.module p.infobox3 {
+    top: 25%;
+    left: 22%;
+}
+
+div.module p.infobox4 {
+    top: 45%;
+    left: 14%;
+}
+
+div.module p.infobox5 {
+    top: 85%;
+    left: 14%;
+}
+
+div.module p.infobox6 {
+    top: 5%;
+    right: 24%;
+}
+
+div.module p.infobox7 {
+    top: 8%;
+    right: 12%;
+}
+
+div.module p.infobox8 {
+    top: 28%;
+    right: 22%;
+}
+
+div.module p.infobox9 {
+    top: 36%;
+    right: 12%;
+}
+
+div.module p.infobox10 {
+    top: 52%;
+    right: 12%;
+}
+
+div.phone-highlight {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #0074D9;
+}

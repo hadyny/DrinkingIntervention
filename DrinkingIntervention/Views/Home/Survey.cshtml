@@ -1,0 +1,1091 @@
+﻿<div class="survey">
+    <h1>
+        About your alcohol use! (Even if you don’t drink, stick with us.)
+    </h1>
+    <div class="survey-content">
+        <h2>
+            Remember, all the questions in this section are completely anonymous! Answer honestly and as accurately as possible.
+        </h2>
+        <ol>
+            <li>
+                <p>
+                    Have you consumed any alcohol in the last 3 months?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="consumeda" name="consumed" value="1" />
+                        <label for="consumeda">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="consumedb" name="consumed" value="0" />
+                        <label for="consumedb">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="js-last-3-months">
+                <p>
+                    Think of the occasion when you drank the most alcohol in the last 3 months. <i>
+                        How many standard drinks
+                    </i> did you drink and over <i>how many hours</i>? We have included a definition
+                    of a standard drink below to help with your estimate.
+                </p>
+                <div class="form-group">
+                    <label for="q1a">Number of drinks</label>
+                    <input type="number" class="form-control" name="q1drinks" min="0" placeholder="Number of drinks" />
+                </div>
+                <div class="form-group">
+                    <label for="q1b">Number of hours</label>
+                    <input type="number" class="form-control" name="q1hours" min="0" placeholder="Number of hours" />
+                </div>
+                <p>
+                    <i>
+                        <pre>
+1 standard drink = 330ml can or bottle of normal strength (4%) beer/cider; 1 small glass of wine or one 30ml shot of liquor
+1.3 standard drinks = 330ml bottle of darker/ stronger beer or RTD
+1.5 standard drink s= 440ml can of normal strength beer
+2.5 standard drinks = 750ml bottle of normal strength beer
+8 standard drinks = one bottle of wine
+                        </pre>
+                    </i>
+                </p>
+            </li>
+            <li class="js-last-3-months">
+                <p>
+                    Using the calendar below, we would like you to reconstruct your typical drinking from
+                    the past 3 months. Make sure you list a number for each day of the calendar. For days you
+                    didn't drink, please use a "0". On days that you did drink, please put the total
+                    number of standard drinks that you consumed.
+                </p>
+                <table class="table drink-calendar">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Number of drinks</th>
+                            <td><input type="number" class="form-control" min="0" name="q2monday" /></td>
+                            <td><input type="number" class="form-control" min="0" name="q2tuesday" /></td>
+                            <td><input type="number" class="form-control" min="0" name="q2wednesday" /></td>
+                            <td><input type="number" class="form-control" min="0" name="q2thursday" /></td>
+                            <td><input type="number" class="form-control" min="0" name="q2friday" /></td>
+                            <td><input type="number" class="form-control" min="0" name="q2saturday" /></td>
+                            <td><input type="number" class="form-control" min="0" name="q2sunday" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>
+                    How often do you have a drink containing alcohol?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q3a" name="q3" value="0" />
+                        <label for="q3a">
+                            Never
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q3b" name="q3" value="1" />
+                        <label for="q3b">
+                            Monthly or less
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q3c" name="q3" value="2" />
+                        <label for="q3c">
+                            2 to 4 times a month
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q3d" name="q3" value="3" />
+                        <label for="q3d">
+                            2 to 3 times a week
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q3e" name="q3" value="4" />
+                        <label for="q3e">
+                            4 or more times a week
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="js-no-drink">
+                <p>
+                    How many drinks do you have on a typical day when you are drinking?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q4a" name="q4" value="0" />
+                        <label for="q4a">
+                            None
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q4b" name="q4" value="1" />
+                        <label for="q4b">
+                            1 or 2
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q4c" name="q4" value="2" />
+                        <label for="q4c">
+                            3 or 4
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q4d" name="q4" value="3" />
+                        <label for="q4d">
+                            5 or 6
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q4e" name="q4" value="4" />
+                        <label for="q4e">
+                            7, 8, or 9
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q4f" name="q4" value="5" />
+                        <label for="q4f">
+                            10 or more
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="js-no-drink">
+                <p>
+                    How often do you have 6 or more drinks on one occasion?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q5a" name="q5" value="0" />
+                        <label for="q5a">
+                            Never
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q5b" name="q5" value="1" />
+                        <label for="q5b">
+                            Less than monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q5c" name="q5" value="2" />
+                        <label for="q5c">
+                            Monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q5d" name="q5" value="3" />
+                        <label for="q5d">
+                            Weekly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q5e" name="q5" value="4" />
+                        <label for="q5e">
+                            Daily or almost daily
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="js-no-drink">
+                <p>
+                    How often during the last year have you found that you were not able to stop
+                    drinking once you had started?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q6a" name="q6" value="0" />
+                        <label for="q6a">
+                            Never
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q6b" name="q6" value="1" />
+                        <label for="q6b">
+                            Less than monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q6c" name="q6" value="2" />
+                        <label for="q6c">
+                            Monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q6d" name="q6" value="3" />
+                        <label for="q6d">
+                            Weekly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q6e" name="q6" value="4" />
+                        <label for="q6e">
+                            Daily or almost daily
+                        </label>
+                    </div>
+                </div>
+            </li>
+
+            <li class="js-no-drink">
+                <p>
+                    How often during the last year have you failed to do what was normally expected from you because of drinking?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q7a" name="q7" value="0" />
+                        <label for="q7a">
+                            Never
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q7b" name="q7" value="1" />
+                        <label for="q7b">
+                            Less than monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q7c" name="q7" value="2" />
+                        <label for="q7c">
+                            Monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q7d" name="q7" value="3" />
+                        <label for="q7d">
+                            Weekly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q7e" name="q7" value="4" />
+                        <label for="q7e">
+                            Daily or almost daily
+                        </label>
+                    </div>
+                </div>
+            </li>
+
+            <li class="js-no-drink">
+                <p>
+                    How often during the last year have you needed a drink in the morning to get yourself going after a heavy drinking session?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q8a" name="q8" value="0" />
+                        <label for="q8a">
+                            Never
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q8b" name="q8" value="1" />
+                        <label for="q8b">
+                            Less than monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q8c" name="q8" value="2" />
+                        <label for="q8c">
+                            Monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q8d" name="q8" value="3" />
+                        <label for="q8d">
+                            Weekly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q8e" name="q8" value="4" />
+                        <label for="q8e">
+                            Daily or almost daily
+                        </label>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="js-no-drink">
+                <p>
+                    How often during the last year have you had a feeling of guilt or remorse after drinking?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q9a" name="q9" value="0" />
+                        <label for="q9a">
+                            Never
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q9b" name="q9" value="1" />
+                        <label for="q9b">
+                            Less than monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q9c" name="q9" value="2" />
+                        <label for="q9c">
+                            Monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q9d" name="q9" value="3" />
+                        <label for="q9d">
+                            Weekly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q9e" name="q9" value="4" />
+                        <label for="q9e">
+                            Daily or almost daily
+                        </label>
+                    </div>
+                </div>
+            </li>
+
+            <li class="js-no-drink">
+                <p>
+                    How often during the last year have you been unable to remember what happened the night before because you had been drinking?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q10a" name="q10" value="0" />
+                        <label for="q10a">
+                            Never
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q10b" name="q10" value="1" />
+                        <label for="q10b">
+                            Less than monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q10c" name="q10" value="2" />
+                        <label for="q10c">
+                            Monthly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q10d" name="q10" value="3" />
+                        <label for="q10d">
+                            Weekly
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q10e" name="q10" value="4" />
+                        <label for="q10e">
+                            Daily or almost daily
+                        </label>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <p>
+                    Have you or someone else been injured as a result of your drinking?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q11a" name="q11" value="0" />
+                        <label for="q11a">
+                            No
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q11b" name="q11" value="2" />
+                        <label for="q11b">
+                            Yes, but not in the last year
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q11c" name="q11" value="4" />
+                        <label for="q11c">
+                            Yes, during the last year
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p>
+                    Has a relative or friend or a doctor or another health worker been concerned about your drinking or suggested you cut down?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="12a" name="q12" value="0" />
+                        <label for="12a">
+                            No
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="12b" name="q12" value="2" />
+                        <label for="12b">
+                            Yes, but not in the last year
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="12c" name="q12" value="4" />
+                        <label for="12c">
+                            Yes, during the last year
+                        </label>
+                    </div>
+                </div>
+            </li>
+
+            <li class="js-last-3-months">
+                <div>
+                    For the following questions, please indicate whether you have experienced the following
+                    <strong><i>during the past 3 months due to your alcohol use</i></strong>. Please do so
+                    by selecting <strong>YES or NO</strong>.
+
+                    <table class="table table-striped table-bordered yesnotable">
+                        <thead><tr><th class="col-xs-10"></th><th class="col-xs-1">Yes</th><th class="col-xs-1">No</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    While drinking, I have said or done embarrassing things
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13aa" name="q13a" value="1" />
+                                        <label for="q13aa">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ab" name="q13a" value="0" />
+                                        <label for="q13ab">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have had a hangover (headache, sick stomach) the morning after I had been drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ba" name="q13b" value="1" />
+                                        <label for="q13ba">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13bb" name="q13b" value="0" />
+                                        <label for="q13bb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have spent too much time drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ca" name="q13c" value="1" />
+                                        <label for="q13ca">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13cb" name="q13c" value="0" />
+                                        <label for="q13cb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have often found it difficult to limit how much I drink</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13da" name="q13d" value="1" />
+                                        <label for="q13da">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13db" name="q13d" value="0" />
+                                        <label for="q13db">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have felt very sick to my stomach or thrown up after drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ea" name="q13e" value="1" />
+                                        <label for="q13ea">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13eb" name="q13e" value="0" />
+                                        <label for="q13eb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have not gone to work or missed classes at school because of drinking, a hangover, or illness caused by drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13fa" name="q13f" value="1" />
+                                        <label for="q13fa">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13fb" name="q13f" value="0" />
+                                        <label for="q13fb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have taken foolish risks when I have been drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ga" name="q13g" value="1" />
+                                        <label for="q13ga">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13gb" name="q13g" value="0" />
+                                        <label for="q13gb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have been overweight because of my drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ha" name="q13h" value="1" />
+                                        <label for="q13ha">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13hb" name="q13h" value="0" />
+                                        <label for="q13hb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have felt badly about myself because of my drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ia" name="q13i" value="1" />
+                                        <label for="q13ia">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ib" name="q13i" value="0" />
+                                        <label for="q13ib">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have driven a car when I knew I had too much to drink to drive safely</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ja" name="q13j" value="1" />
+                                        <label for="q13ja">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13jb" name="q13j" value="0" />
+                                        <label for="q13jb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I often have ended up drinking on nights when I had planned not to drink</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ka" name="q13k" value="1" />
+                                        <label for="q13ka">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13kb" name="q13k" value="0" />
+                                        <label for="q13kb">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> I have passed out from drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13la" name="q13l" value="1" />
+                                        <label for="q13la">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13lb" name="q13l" value="0" />
+                                        <label for="q13lb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>My physical appearance has been harmed by my drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ma" name="q13m" value="1" />
+                                        <label for="q13ma">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13mb" name="q13m" value="0" />
+                                        <label for="q13mb">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have woken up in an unexpected place after heavy drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13na" name="q13n" value="1" />
+                                        <label for="q13na">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13nb" name="q13n" value="0" />
+                                        <label for="q13nb">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have found that I needed larger amounts of alcohol to feel any effect, or that I could no longer get high or drunk on the amount that used to get me high or drunk</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13oa" name="q13o" value="1" />
+                                        <label for="q13oa">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ob" name="q13o" value="0" />
+                                        <label for="q13ob">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>When drinking, I have done impulsive things I regretted later</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13pa" name="q13p" value="1" />
+                                        <label for="q13pa">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13pb" name="q13p" value="0" />
+                                        <label for="q13pb">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>My drinking has created problems between myself and my boyfriend/girlfriend/ spouse, parents, or other near relatives</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13qa" name="q13q" value="1" />
+                                        <label for="q13qa">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13qb" name="q13q" value="0" />
+                                        <label for="q13qb">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I’ve not been able to remember large stretches of time while drinking heavily</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ra" name="q13r" value="1" />
+                                        <label for="q13ra">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13rb" name="q13r" value="0" />
+                                        <label for="q13rb">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>My drinking has gotten me into sexual situations I later regretted</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13sa" name="q13s" value="1" />
+                                        <label for="q13sa">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13sb" name="q13s" value="0" />
+                                        <label for="q13sb">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have become very rude, obnoxious, or insulting after drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ta" name="q13t" value="1" />
+                                        <label for="q13ta">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13tb" name="q13t" value="0" />
+                                        <label for="q13tb">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have had less energy or felt tired because of my drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ua" name="q13u" value="1" />
+                                        <label for="q13ua">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13ub" name="q13u" value="0" />
+                                        <label for="q13ub">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have felt like I needed a drink after I’d gotten up (that is, before breakfast)</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13va" name="q13v" value="1" />
+                                        <label for="q13va">
+
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13vb" name="q13v" value="0" />
+                                        <label for="q13vb">
+
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>The quality of my work or school work has suffered because of my drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13wa" name="q13w" value="1" />
+                                        <label for="q13wa">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13wb" name="q13w" value="0" />
+                                        <label for="q13wb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>I have neglected my obligations to family, work, or school because of drinking</td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13xa" name="q13x" value="1" />
+                                        <label for="q13xa">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio radio-primary">
+                                        <input type="radio" id="q13xb" name="q13x" value="0" />
+                                        <label for="q13xb">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </li>
+            <li>
+                <p>
+                    Do you experience FoMO (Fear of Missing Out)?
+                </p>
+                <div class="form-group">
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q14a" name="q14" value="1" />
+                        <label for="q14a">
+                            1: No, not true
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q14b" name="q14" value="2" />
+                        <label for="q14b">
+                            2
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q14c" name="q14" value="3" />
+                        <label for="q14c">
+                            3
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q14d" name="q14" value="4" />
+                        <label for="q14d">
+                            4
+                        </label>
+                    </div>
+                    <div class="radio radio-primary">
+                        <input type="radio" id="q14e" name="q14" value="5" />
+                        <label for="q14e">
+                            5: Yes, extremely true
+                        </label>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <p>
+                    Please rate the following items from −3 (strongly disagree) to 3 (strongly agree)
+                </p>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>-3</th>
+                            <th>-2</th>
+                            <th>-1</th>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                Drinking is part of my self-image
+                            </th>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15aa" name="q15a" value="-3" /><label for="q15aa"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ab" name="q15a" value="-2" /><label for="q15ab"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ac" name="q15a" value="-1" /><label for="q15ac"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ad" name="q15a" value="0" /><label for="q15ad"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ae" name="q15a" value="1" /><label for="q15ae"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15af" name="q15a" value="2" /><label for="q15af"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ag" name="q15a" value="3" /><label for="q15ag"></label></div></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Drinking is part of "who I am"
+                            </th>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ba" name="q15b" value="-3" /><label for="q15ba"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15bb" name="q15b" value="-2" /><label for="q15bb"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15bc" name="q15b" value="-1" /><label for="q15bc"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15bd" name="q15b" value="0" /><label for="q15bd"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15be" name="q15b" value="1" /><label for="q15be"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15bf" name="q15b" value="2" /><label for="q15bf"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15bg" name="q15b" value="3" /><label for="q15bg"></label></div></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Drinking is a part of my personality
+                            </th>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ca" name="q15c" value="-3" /><label for="q15ca"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15cb" name="q15c" value="-2" /><label for="q15cb"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15cc" name="q15c" value="-1" /><label for="q15cc"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15cd" name="q15c" value="0" /><label for="q15cd"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ce" name="q15c" value="1" /><label for="q15ce"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15cf" name="q15c" value="2" /><label for="q15cf"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15cg" name="q15c" value="3" /><label for="q15cg"></label></div></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Drinking is a large part of my daily life
+                            </th>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15da" name="q15d" value="-3" /><label for="q15da"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15db" name="q15d" value="-2" /><label for="q15db"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15dc" name="q15d" value="-1" /><label for="q15dc"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15dd" name="q15d" value="0" /><label for="q15dd"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15de" name="q15d" value="1" /><label for="q15de"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15df" name="q15d" value="2" /><label for="q15df"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15dg" name="q15d" value="3" /><label for="q15dg"></label></div></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Others view drinking as part of my personality
+                            </th>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ea" name="q15e" value="-3" /><label for="q15ea"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15eb" name="q15e" value="-2" /><label for="q15eb"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ec" name="q15e" value="-1" /><label for="q15ec"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ed" name="q15e" value="0" /><label for="q15ed"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ee" name="q15e" value="1" /><label for="q15ee"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15ef" name="q15e" value="2" /><label for="q15ef"></label></div></td>
+                            <td><div class="radio radio-primary"><input type="radio" id="q15eg" name="q15e" value="3" /><label for="q15eg"></label></div></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </li>
+        </ol>
+        <hr />
+        <button name="btn-continue" type="submit" class="btn btn-primary" onclick="return validate();">Continue &raquo;</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var els = document.querySelectorAll('input[name=consumed]');
+        for (var i = 0; i < els.length; i++) {
+            els[i].addEventListener("change", function () {
+                var l3ms = document.querySelectorAll('.js-last-3-months');
+                for (var j = 0; j < l3ms.length; j++) {
+                    if (document.querySelectorAll('input[name=consumed]:checked')[0].value == '1') {
+                        l3ms[j].classList.remove('hidden');
+                    } else {
+                        l3ms[j].classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        var q3 = document.querySelectorAll('input[name=q3]');
+        for (var i = 0; i < q3.length; i++) {
+            q3[i].addEventListener("change", function () {
+                var els = document.querySelectorAll('.js-no-drink');
+                if (document.querySelectorAll('input[name=q3]:checked')[0].value != '0') {
+                    for (var j = 0; j < els.length; j++) {
+                        els[j].classList.remove('hidden');
+                    }
+                } else {
+                    for (var j = 0; j < els.length; j++) {
+                        els[j].classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        function validate() {
+            var missedQuestion = false;
+            var hiddenQuestions = document.querySelectorAll('[class*="hidden"]').length;
+            // if consumed = 0 then elementNumber =
+            // if consumed and q3 = 0 then elementNumber = 
+            var blankNumberInputs = 0;
+            Array.prototype.forEach.call(document.querySelectorAll('input[type="number"]'), function (el, i) {
+                if (el.value == "") blankNumberInputs++;
+            });
+
+            if (document.querySelector('input[name="consumed"]:checked').value == "1" &&
+                (blankNumberInputs != 0 ||
+                (document.querySelector('input[name="q3"]:checked').value != "0" && document.querySelectorAll('input[type="radio"]:checked').length != 41) ||
+                (document.querySelector('input[name="q3"]:checked').value == "0" && document.querySelectorAll('input[type="radio"]:checked').length != 34)
+                )
+            ) {
+                missedQuestion = true;
+            }
+
+            if (document.querySelector('input[name="consumed"]:checked').value == "0" &&
+                (
+                (document.querySelector('input[name="q3"]:checked').value == "0" && document.querySelectorAll('input[type="radio"]:checked').length != 10) ||
+                (document.querySelector('input[name="q3"]:checked').value != "0" && document.querySelectorAll('input[type="radio"]:checked').length != 17)
+                )
+            ) {
+                missedQuestion = true;
+            }
+     
+
+            if (missedQuestion) {
+                return confirm("You haven't completed all the questions, do you want to continue?");
+            } else {
+                return true;
+            }
+        }
+    </script>
+}

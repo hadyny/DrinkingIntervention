@@ -1,0 +1,88 @@
+﻿<div class="survey">
+    <h1>
+        University students’ alcohol interactive
+    </h1>
+    <div class="survey-content">
+        <p class="text-center">
+            The following questionnaire has been designed to survey information about students' lifestyles and offer 
+            feedback for incoming students. This questionnaire will request a mobile phone number. If you decide to 
+            provide a mobile number, the study researchers will be able to track your alcohol use as the year progresses. 
+            Those who provide a cell phone number will also be placed in either an intervention condition or a control 
+            condition. Those in the intervention condition will receive text messages about drinking in moderation.
+
+        </p>
+        <hr />
+
+        <p>
+            By clicking on EACH of these boxes I acknowledge that I have read the information concerning this project 
+            and understand what it is about. All my questions have been answered to my satisfaction. I understand that 
+            I am free to request further information at any stage. 
+        </p>
+
+        <h3>I know that:</h3>
+
+        <div class="form-group">
+            <div class="checkbox checkbox-circle checkbox-primary">
+                <input type="checkbox" id="participation-q1" value="q1" required />
+                <label for="participation-q1">
+                    My participation in the project is entirely voluntary   
+                </label>
+            </div>
+            <div class="checkbox checkbox-circle checkbox-primary">
+                <input type="checkbox" id="participation-q2" value="q2" required />
+                <label for="participation-q2">
+                    I am free to withdraw from the project at any time without any disadvantage
+                </label>
+            </div>
+            <div class="checkbox checkbox-circle checkbox-primary">
+                <input type="checkbox" id="participation-q3" value="q3" required />
+                <label for="participation-q3">
+                    The questionnaire data will be retained and secure and my name will not be identified with any of that data. Any raw data on which the results of the project depend will be retained in secure storage for at least five years.
+                </label>
+            </div>
+            <div class="checkbox checkbox-circle checkbox-primary">
+                <input type="checkbox" id="participation-q4" value="q4" required />
+                <label for="participation-q4">
+                    I will be reimbursed for my study costs ($100) for responding to text messages throughout Orientation Week and the academic year.
+                </label>
+            </div>
+            <div class="checkbox checkbox-circle checkbox-primary">
+                <input type="checkbox" id="participation-q5" value="q5" required />
+                <label for="participation-q5">
+                    The results of the project may be published and available in the University of Otago Library (Dunedin, New Zealand) but every attempt will be made to preserve my anonymity.
+                </label>
+            </div>
+        </div>
+        <hr />
+        <a name="btn-continue" class="next-link btn btn-primary btn-lg" onclick="goNext()" disabled>Continue</a>
+
+        <small>
+            This study has been approved by the University of Otago Human Ethics Committee #13/ 267.
+            If you have any concerns about the ethical conduct of the research you may contact the
+            Committee through the Human Ethics Committee Administrator (ph 03 479 8256 or email
+            <a href="gary.witte@otago.ac.nz">gary.witte@otago.ac.nz</a>). Any issues you raise will
+            be treated in confidence and investigated and you will be informed of the outcome.
+        </small>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var els = document.querySelectorAll('.checkbox input[type=checkbox]');
+
+        for (var i = 0; i < els.length; i++) {
+            els[i].addEventListener("change", function () {
+                var count = document.querySelectorAll('.checkbox input[type=checkbox]:checked').length;
+                if (count == 5) {
+                    document.querySelectorAll('a[name=btn-continue]')[0].removeAttribute('disabled');
+                } else {
+                    document.querySelectorAll('a[name=btn-continue]')[0].setAttribute('disabled', 'disabled');
+                }
+            });
+        }
+
+        var goNext = function () {
+            window.location = '@Url.Action("demographics")';
+        }
+    </script>
+}

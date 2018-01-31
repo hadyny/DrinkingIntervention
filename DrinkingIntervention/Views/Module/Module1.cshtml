@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_ModuleLayout.cshtml";
+}
+
+<div class="module">
+    <div class="title">
+        <h3>University Students'</h3>
+        <h1>Alcohol use and you!</h1>
+    </div>
+
+    <div class="section">
+        <h2>
+            Where does your drinking fit in?
+        </h2>
+        <p>
+            This short summary provides you with the results of your drinking and offers information about alcohol use,
+            how it affects you, and how it relates to other students at the University of Otago. Often, new students'
+            perception of how other students drink is incorrect. We hope that the following feedback will help
+            create a picture of your drinking and information to prepare you for university.
+        </p>
+        <div class="clearfix">
+            <div class="col-xs-3">
+                <img src="~/Content/Images/orange-cup.png" alt="Wine Glass" />
+            </div>
+            <div class="col-xs-3">
+                <img src="~/Content/Images/orange-bottle.png" alt="Beer Bottle" />
+            </div>
+            <div class="col-xs-3">
+                <img src="~/Content/Images/orange-person-with-book.png" alt="Person with book" />
+            </div>
+            <div class="col-xs-3">
+                <img src="~/Content/Images/orange-brain-head.png" alt="Brain" />
+            </div>
+        </div>
+    </div>
+
+    <a href="@Url.Action("Module2")">Click to continue</a>
+
+</div>

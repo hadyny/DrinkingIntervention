@@ -1,0 +1,242 @@
+﻿@model DrinkingIntervention.Models.Demographics
+<div class="survey">
+    <h1>
+        University students’ alcohol interactive
+    </h1>
+    <div class="survey-content">
+        @if (ViewBag.emailError != null)
+            {
+            <div class="alert alert-danger">
+                The email address @ViewBag.email has already been used for this survey
+            </div>
+        }
+        <p>
+            The following questionnaire has been designed to survey information about students' lifestyles
+            and offer feedback for incoming students.  We will ask you some questions about your drinking
+            and provide you a short summary of how it relates to other students at the University of Otago.
+            You don’t have to drink to take part!
+        </p>
+
+        <p>
+            This questionnaire will request a mobile phone number. If you decide to provide a mobile number,
+            the study researchers will be able to track your alcohol use as the year progresses. Those who
+            provide a cell phone number will also be placed in either an intervention condition or a control
+            condition. Those in the intervention condition will receive text messages throughout Orientation
+            Week about drinking in moderation. 
+        </p>
+
+        <h2>
+            About You
+        </h2>
+
+        <div class="form-group">
+            <label>Which gender do you most affiliate with?</label>
+            <div class="radio radio-primary">
+                <input type="radio" name="gender" id="gender-male" value="male" required />
+                <label for="gender-male">
+                    Male
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="gender" id="gender-female" value="female" required />
+                <label for="gender-female">
+                    Female
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Which residential college are you planning on attending?</label>
+            <div class="radio radio-primary">
+                <input type="radio" name="college" id="college-unicol" value="unicol" required />
+                <label for="college-unicol">
+                    Unicol
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="college" id="college-aquinas" value="aquinas" required />
+                <label for="college-aquinas">
+                    Aquinas
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="college" id="college-citycollege" value="citycollege" required />
+                <label for="college-citycollege">
+                    City College/Caroline Freeman College
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="college" id="college-cumberland" value="cumberland" required />
+                <label for="college-cumberland">
+                    Cumberland
+                </label>
+            </div>
+        </div>
+
+        <div class="radio radio-primary">
+            <input type="radio" name="college" id="college-other" value="other" required />
+            <label for="college-other">
+                Other <input type="text" name="collegeOther" class="form-control js-college-other hidden" placeholder="Please specify" />
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>Which institution are you a student at?</label>
+            <div class="radio radio-primary">
+                <input type="radio" name="tertiaryinstitution" id="institution-university" value="university" required />
+                <label for="institution-university">
+                    University
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="tertiaryinstitution" id="institution-polytech" value="polytech" required />
+                <label for="institution-polytech">
+                    Polytech
+                </label>
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <label>Are you the first in your immediate family (Mother, Father, or siblings) to attend university?</label>
+            <div class="radio radio-primary">
+                <input type="radio" name="firsttoattend" id="firsttoattend-yes" value="yes" required />
+                <label for="firsttoattend-yes">
+                    Yes
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="firsttoattend" id="firsttoattend-no" value="no" required />
+                <label for="firsttoattend-no">
+                    No
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="firsttoattend" id="firsttoattend-dontknow" value="dontknow" required />
+                <label for="firsttoattend-dontknow">
+                    I don't know
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Are you the first in your wider family to attend university?</label>
+            <div class="radio radio-primary">
+                <input type="radio" name="firsttoattendwider" id="firsttoattendwider-yes" value="yes" required />
+                <label for="firsttoattendwider-yes">
+                    Yes
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="firsttoattendwider" id="firsttoattendwider-no" value="no" required />
+                <label for="firsttoattendwider-no">
+                    No
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="firsttoattendwider" id="firsttoattendwider-dontknow" value="dontknow" required />
+                <label for="firsttoattendwider-dontknow">
+                    I don't know
+                </label>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>How would you describe your origin? (Please select the option that best applies to you)</label>
+            <div class="radio radio-primary">
+                <input type="radio" name="ethnicity" id="ethnicity-maori" value="maori" required />
+                <label for="ethnicity-maori">
+                    Māori
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="ethnicity" id="ethnicity-nz-euro" value="nz-euro" required />
+                <label for="ethnicity-nz-euro">
+                    New Zealand European
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="ethnicity" id="ethnicity-pacific-islander" value="pacific-islander" required />
+                <label for="ethnicity-pacific-islander">
+                    Pacific Islander
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="ethnicity" id="ethnicity-asian" value="asian" required />
+                <label for="ethnicity-asian">
+                    Asian
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="ethnicity" id="ethnicity-indian" value="indian" required />
+                <label for="ethnicity-indian">
+                    Indian
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="ethnicity" id="ethnicity-middle-eastern" value="middle-eastern-latin-american-african" required />
+                <label for="ethnicity-middle-eastern">
+                    Middle Eastern/Latin American/African
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="ethnicity" id="ethnicity-european" value="european" required />
+                <label for="ethnicity-european">
+                    Other European
+                </label>
+            </div>
+            <div class="radio radio-primary">
+                <input type="radio" name="ethnicity" id="ethnicity-other" value="other" required />
+                <label for="ethnicity-other">
+                    Other <input type="text" class="form-control js-ethnic-other hidden" name="ethnicity-other-desc" placeholder="Please specify" />
+                </label>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label for="age">How old are you?</label>
+            <input type="number" class="form-control" min="0" step="1" name="age" placeholder="Age" required />
+        </div>
+
+        <div class="form-group">
+            <label for="weight">Weight in KG (this is so we can give you an estimate of your BAC when you drink)</label>
+            <input type="number" class="form-control" name="weight" min="0" max="200" placeholder="Weight (kg)" />
+        </div>
+
+        <hr />
+        <button name="btn-continue" type="submit" class="btn btn-primary">Continue &raquo;</button>
+
+    </div>
+</div>
+@section Scripts {
+    <script>
+        var els = document.querySelectorAll('input[name=ethnicity');
+        for (var i = 0; i < els.length; i++) {
+            els[i].addEventListener("change", function () {
+                var el = document.querySelectorAll('.js-ethnic-other')[0];
+                if (document.querySelectorAll('input[name=ethnicity]:checked')[0].value == 'other' && el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden')
+                }
+            });
+        }
+
+        var els2 = document.querySelectorAll('input[name=college');
+        for (var i = 0; i < els2.length; i++) {
+            els2[i].addEventListener("change", function () {
+                var el = document.querySelectorAll('.js-college-other')[0];
+                if (document.querySelectorAll('input[name=college]:checked')[0].value == 'other' && el.classList.contains('hidden')) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden')
+                }
+            });
+        }
+    </script>
+}

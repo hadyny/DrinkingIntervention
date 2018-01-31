@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_ModuleLayout.cshtml";
+}
+
+<div class="module">
+    <div class="title">
+        <h3>Where do I fit in?</h3>
+        <h1>Largest drinking session</h1>
+    </div>
+
+    <div class="section">
+        <h2>Peak BAC</h2>
+        <p>
+            You indicated that you'd had @ViewBag.numDrinks drinks over @ViewBag.numHours hours.
+            We've calculated what your estimated Blood Alcohol Concentration (BAC) would be if
+            you were to drink this many drinks in this many hours (based on your weight, and
+            gender). Your peak BAC on this occasion was @ViewBag.peakBAC. Check the following chart to
+            see what behavioural and physical effects this level of BAC is associated with.
+        </p>
+        <div class="shield">
+            <h1>@ViewBag.peakBAC</h1>
+            <img src="~/Content/Images/shield.jpg" alt="Shield" />
+        </div>
+    </div>
+
+    <a href="@Url.Action("Module7")">Click to continue</a>
+</div>

@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/_ModuleLayout.cshtml";
+}
+
+<div class="module">
+    <div class="title">
+        <h3>Where do I fit in?</h3>
+        <h1>Audit score</h1>
+    </div>
+
+    <div class="grey section pyramid clearfix">
+        <div>
+            <img src="~/Content/Images/pyramid.jpg" alt="Pyramid" width="800" />
+        </div>
+        <div>
+            <div class="labels">
+                <div class="veryhigh infobox hidden">
+                    At a very high risk your drinking will cause you or may have already caused you problems. Cutting down how much and how often you drink will reduce your risks and make your academic life a lot smoother.
+                </div>
+                <h1 class="@ViewBag.vhclass" onmouseover="document.querySelector('.veryhigh').classList.remove('hidden')" onmouseout="document.querySelector('.veryhigh').classList.add('hidden')">
+                    @Html.Raw(ViewBag.veryHigh)
+                </h1>
+                <div class="high infobox hidden">
+                    At a high risk your drinking will cause you or may have already caused you problems. Cutting down how much and how often you drink will reduce your risks and make your academic life a lot smoother.
+                </div>
+                <h1 class="@ViewBag.hclass" onmouseover="document.querySelector('.high').classList.remove('hidden')" onmouseout="document.querySelector('.high').classList.add('hidden')">
+                    @Html.Raw(ViewBag.high)
+                </h1>
+                <div class="medium infobox hidden">
+                    At a medium risk your drinking is putting you at risk of developing problems. Cutting down how much and how often you drink will reduce your risks and make your academic life a lot smoother
+                </div>
+                <h1 class="@ViewBag.mclass" onmouseover="document.querySelector('.medium').classList.remove('hidden')" onmouseout="document.querySelector('.medium').classList.add('hidden')">
+                    @Html.Raw(ViewBag.medium)
+                </h1>
+                <div class="low infobox hidden">
+                    At a low risk your drinking is not likely to cause you problems if it remains at this level. At the current level, your drinking will make your transition to academic life nice and smooth. But, if you were to start drinking more it is still important to notice the effect alcohol is having on you.
+                </div>
+                <h1 class="@ViewBag.lclass" onmouseover="document.querySelector('.low').classList.remove('hidden')" onmouseout="document.querySelector('.low').classList.add('hidden')">
+                    @Html.Raw(ViewBag.low)
+                </h1>
+                <div class="noprob infobox hidden">
+                    At this level there would be no problem with your drinking, but if you were to start drinking more it is still important to notice the effect alcohol is having on you. At the current level, your drinking will make your transition to academic life nice and smooth.
+                </div>
+                <h1 class="@ViewBag.npclass" onmouseover="document.querySelector('.noprob').classList.remove('hidden')" onmouseout="document.querySelector('.noprob').classList.add('hidden')">
+                    @Html.Raw(ViewBag.noProblem)
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="section clearfix">
+        <div class="col-xs-6 text-center">
+            <img src="~/Content/Images/stethescope.jpg" alt="Stethescope" />
+        </div>
+        <div class="col-xs-6">
+            <h3>
+                @ViewBag.auditText
+            </h3>
+            <h3>
+                @ViewBag.auditDescription
+            </h3>
+        </div>
+    </div>
+
+    <a href="@Url.Action("Module6")">Click to continue</a>
+</div>
+
+@section scripts {
+<script>
+
+</script>    
+}

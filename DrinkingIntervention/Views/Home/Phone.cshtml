@@ -1,0 +1,40 @@
+﻿<div class="survey">
+    <div class="survey-content">
+        @if (ViewBag.phoneError != null)
+        {
+            <div class="alert alert-danger">
+                The phone number @ViewBag.phone has already been used for this survey
+            </div>
+        }
+        <div class="phone-highlight">
+            <h3>
+                To earn an easy $100 please enter your mobile number:
+            </h3>
+            <div class="form-group">
+                <input type="tel" class="form-control phoneNumber" name="PhoneNumber" placeholder="Mobile phone number" />
+            </div>
+        </div>
+        <p>
+            Those who decide to leave a mobile number will receive text messages during O'Week,
+            the academic year, and will be asked to complete 2 short surveys. By supplying your
+            mobile phone number you may also receive eight texts during Orientation Week about
+            drinking in moderation. If you would like to take part, please leave your mobile phone
+            number.
+        </p>
+        <hr />
+
+        <button name="btn-continue" type="submit" class="next-link btn btn-primary btn-lg" onclick="return next();">Continue &raquo;</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var next = function () {
+            if (document.querySelector('input[name="PhoneNumber"]').value != "") {
+                return true;
+            } else {
+                return confirm("Are you sure you don't want to leave a phone number?")
+            }
+        };
+    </script>
+}

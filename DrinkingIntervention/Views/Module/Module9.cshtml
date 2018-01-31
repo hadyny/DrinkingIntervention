@@ -1,0 +1,144 @@
+﻿@{
+    Layout = "~/Views/Shared/_ModuleLayout.cshtml";
+}
+
+<div class="module">
+    <div class="title">
+        <h3>Where do I fit in?</h3>
+        <h1>Short term alcohol related consequences</h1>
+    </div>
+    <div class="section">
+        <h1>
+            <img src="~/Content/Images/orange-heart.jpg" alt="Heart" style="display: inline !important;" />
+            @ViewBag.numHarms consequences!
+        </h1>
+        <h3>
+            You reported experiencing @ViewBag.numHarms consequences because of your drinking in the past
+            3 months.
+        </h3>
+
+    </div>
+
+    <div class="light-orange section">
+        <h1>Student Consequences</h1>
+        <p>Hover over the bottle to see alcohol-related consequences other Otago students experience.</p>
+        <div class="bottleboxes">
+            <img src="~/Content/Images/bottle-map.jpg" alt="Bottle" usemap="#bottlemap" width="150" />
+            <map name="bottlemap">
+                <area class="js-bottle-top" shape="rect" coords="0,0,150,287" alt="Top of bottle" href="#" onmouseout="javascript:clear()" onmouseover="javascript:bottletop();" />
+                <area class="js-bottle-middle" shape="rect" coords="0,288,150,451" alt="Top of bottle" href="#" onmouseout="javascript:clear()" onmouseover="javascript:middle();" />
+                <area class="js-bottle-bottom" shape="rect" coords="0,452,150,624" alt="Top of bottle" href="#" onmouseout="javascript:clear()" onmouseover="javascript:bottom();" />
+            </map>
+            <div class="bottlebox1 hidden">
+                <img src="~/Content/Images/orange-car.png" alt="Car" />
+                @ViewBag.droveIntoxicated% drove while intoxicated.
+            </div>
+            <hr class="bottlebox1 hidden" />
+            <div class="bottlebox2 hidden">
+                <img src="~/Content/Images/orange-passed-out.png" alt="Passed out" />
+                @ViewBag.passedOut% passed out.
+            </div>
+            <hr class="bottlebox2 hidden" />
+            <div class="bottlebox3 hidden">
+                <img src="~/Content/Images/orange-brain-head.png" alt="Memory" />
+                @ViewBag.cantRemember% were not able to remember stretched of time.
+            </div>
+            <hr class="bottlebox3 hidden" />
+            <div class="bottlebox4 hidden">
+                <img src="~/Content/Images/orange-person-falling.png" alt="Embarrassed" />
+                @ViewBag.embarrassed% embarrassed themselves.
+            </div>
+            <hr class="bottlebox4 hidden" />
+            <div class="bottlebox5 hidden">
+                <img src="~/Content/Images/orange-broken-arm.png" alt="Hurt" />
+                @ViewBag.hurt% hurt themselves.
+            </div>
+            <hr class="bottlebox5 hidden" />
+            <div class="bottlebox6 hidden">
+                <img src="~/Content/Images/orange-person-with-book.png" alt="Academic Harm" />
+                @ViewBag.academicHarm% experience academic harm.
+            </div>
+            <hr class="bottlebox6 hidden" />
+            <div class="bottlebox7 hidden">
+                <img src="~/Content/Images/orange-rude.png" alt="Rude" />
+                @ViewBag.rude% became rude.
+            </div>
+            <hr class="bottlebox7 hidden" />
+        </div>
+    </div>
+
+    <a href="@Url.Action("Module10")">Click to continue</a>
+</div>
+
+@section Scripts {
+    <script>
+        function bottletop() {
+            document.getElementsByClassName('bottlebox1')[0].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox2')[0].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox3')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox4')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox5')[0].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox6')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox7')[0].classList.add('hidden');
+
+            document.getElementsByClassName('bottlebox1')[1].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox2')[1].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox3')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox4')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox5')[1].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox6')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox7')[1].classList.add('hidden');
+        };
+        function middle() {
+            document.getElementsByClassName('bottlebox1')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox2')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox3')[0].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox4')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox5')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox6')[0].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox7')[0].classList.add('hidden');
+
+            document.getElementsByClassName('bottlebox1')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox2')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox3')[1].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox4')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox5')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox6')[1].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox7')[1].classList.add('hidden');
+        };
+        function bottom() {
+            document.getElementsByClassName('bottlebox1')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox2')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox3')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox4')[0].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox5')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox6')[0].classList.add('hidden');
+            document.getElementsByClassName('bottlebox7')[0].classList.remove('hidden');
+
+            document.getElementsByClassName('bottlebox1')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox2')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox3')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox4')[1].classList.remove('hidden');
+            document.getElementsByClassName('bottlebox5')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox6')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox7')[1].classList.remove('hidden');
+        };
+
+        function clear() {
+            document.getElementsByClassName('bottlebox1')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox2')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox3')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox4')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox5')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox6')[1].classList.add('hidden');
+            document.getElementsByClassName('bottlebox7')[1].classList.add('hidden');
+        }
+
+        var areas = document.querySelectorAll('area');
+        for (var i = 0; i < areas.length; i++) {
+            areas[i].addEventListener("click", function (e) {
+                e.preventDefault();
+            });
+        }
+    </script>
+}

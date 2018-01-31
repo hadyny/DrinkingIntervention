@@ -1,0 +1,120 @@
+﻿@{
+    Layout = "~/Views/Shared/_ModuleLayout.cshtml";
+}
+
+<div class="module">
+    <div class="title">
+        <h3>University Students'</h3>
+        <h1>Long-Term Harm</h1>
+    </div>
+
+    <div class="section">
+        <p>
+            Heavy and long-term alcohol use can also have detrimental effects on your mental and physical health.
+            Alcohol's impact can be direct (e.g., alcohol poisoning) or indirect (e.g., alcohol fueled violence
+            or suicide).
+        </p>
+        <p>
+            The 'body map' below shows you the impact that heavy or long-term drinking can have on your health
+            and wellbeing. Even though you are young, the effect of drinking can last well beyond the hangover.
+            Click on items below to find out about the harm alcohol can have.
+        </p>
+        <div class="clearfix">
+            <div class="col-xs-3">
+                <img src="~/Content/Images/grey-brain-head.png" alt="Brainy" />
+            </div>
+            <div class="col-xs-3">
+                <img src="~/Content/Images/grey-injured-person.png" alt="Injured" />
+            </div>
+            <div class="col-xs-3">
+                <img src="~/Content/Images/grey-passed-out.png" alt="Passed out" />
+            </div>
+            <div class="col-xs-3">
+                <img src="~/Content/Images/grey-rude.png" alt="Rude" />
+            </div>
+        </div>
+    </div>
+
+    <div class="light-orange section big_person">
+        <img src="~/Content/Images/big-person.jpg" alt="Person" />
+        <div class="infobox1">
+            <img src="~/Content/Images/orange-brain.png" alt="Brain" class="js-infobox1" />
+        </div>
+        <p class="hidden infobox1"><strong>Mental Health:</strong> Intensify mental health symptoms such as depression or anxiety</p>
+        <hr class="infobox1" />
+        <div class="infobox2">
+            <img src="~/Content/Images/orange-lungs.png" alt="Lungs" class="js-infobox2" />
+        </div>
+        <p class="hidden infobox2"><strong>Lungs:</strong> Heavy alcohol use can increase the risk of lung infection</p>
+        <hr class="infobox2" />
+        <div class="infobox3">
+            <img src="~/Content/Images/orange-circle-heart.png" alt="Heart" class="js-infobox3" />
+        </div>
+        <p class="hidden infobox3"><strong>Heart:</strong> Heavy drinking is linked to irregular heartbeat and high blood pressure</p>
+        <hr class="infobox3" />
+        <div class="infobox4">
+            <img src="~/Content/Images/orange-kidneys.png" alt="Kidneys" class="js-infobox4" />
+        </div>
+        <p class="hidden infobox4"><strong>Kidneys:</strong> Alcohol use affects kidney function</p>
+        <hr class="infobox4" />
+        <div class="infobox5">
+            <img src="~/Content/Images/orange-blood.png" alt="Blood" class="js-infobox5" />
+        </div>
+        <p class="hidden infobox5"><strong>Blood:</strong> Alcohol use can cause anemia</p>
+        <hr class="infobox5" />
+        <div class="infobox6">
+            <img src="~/Content/Images/orange-brain-head.png" alt="Brain" class="js-infobox6" />
+        </div>
+        <p class="hidden infobox6"><strong>Brain:</strong> Alcohol can damage the brain and lead to weakness, pain, epilepsy, memory loss, and dementia</p>
+        <hr class="infobox6" />
+        <div class="infobox7">
+            <img src="~/Content/Images/orange-lips.png" alt="Lips" class="js-infobox7" />
+        </div>
+        <p class="hidden infobox7"><strong>Mouth:</strong> Alcohol can cause mouth or throat cancer</p>
+        <hr class="infobox7" />
+        <div class="infobox8">
+            <img src="~/Content/Images/orange-breast.png" alt="Breast" class="js-infobox8" />
+        </div>
+        <p class="hidden infobox8"><strong>Breast:</strong> Alcohol use is linked to breast cancer. The more alcohol consumed, the greater the risk</p>
+        <hr class="infobox8" />
+        <div class="infobox9">
+            <img src="~/Content/Images/orange-intestine.png" alt="Intestine" class="js-infobox9" />
+        </div>
+        <p class="hidden infobox9"><strong>Large intestine or rectum:</strong> Long-term alcohol use can lead to cancer in intestine/rectum</p>
+        <hr class="infobox9" />
+        <div class="infobox10">
+            <img src="~/Content/Images/orange-broken-arm.png" alt="Broken Arm" class="js-infobox10" />
+        </div>
+        <p class="hidden infobox10"><strong>Co­ordination:</strong> Alcohol affects co­ordination, which can lead to injury. Chronic use is linked to osteoporosis</p>
+        <hr class="infobox10" />
+    </div>
+
+    <a href="@Url.Action("Module11")">Click to continue</a>
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelector('.js-infobox1').addEventListener('click', function () { showBox('p.infobox1'); });
+        document.querySelector('.js-infobox2').addEventListener('click', function () { showBox('p.infobox2'); });
+        document.querySelector('.js-infobox3').addEventListener('click', function () { showBox('p.infobox3'); });
+        document.querySelector('.js-infobox4').addEventListener('click', function () { showBox('p.infobox4'); });
+        document.querySelector('.js-infobox5').addEventListener('click', function () { showBox('p.infobox5'); });
+        document.querySelector('.js-infobox6').addEventListener('click', function () { showBox('p.infobox6'); });
+        document.querySelector('.js-infobox7').addEventListener('click', function () { showBox('p.infobox7'); });
+        document.querySelector('.js-infobox8').addEventListener('click', function () { showBox('p.infobox8'); });
+        document.querySelector('.js-infobox9').addEventListener('click', function () { showBox('p.infobox9'); });
+        document.querySelector('.js-infobox10').addEventListener('click', function () { showBox('p.infobox10'); });
+
+        function showBox(box) {
+            clearAllBoxes();
+            document.querySelector(box).classList.remove('hidden');
+        }
+
+        function clearAllBoxes() {
+            var allBoxes = document.querySelectorAll('div.big_person p');
+            for (var i = 0; i < allBoxes.length; i++) {
+                allBoxes[i].classList.add('hidden');
+            }
+        }
+    </script>
+}

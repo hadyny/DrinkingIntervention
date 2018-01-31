@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_ModuleLayout.cshtml";
+}
+
+<div class="module">
+    <div class="title">
+        <h3>University Students'</h3>
+        <h1>Alcohol use and you!</h1>
+    </div>
+
+    <div class="light-orange section">
+        <h1 class="aveDrinks">
+            @for (int i = 1; i < (int)ViewBag.aveNumWeeklyDrinks; i++)
+            {
+                <img src="~/Content/Images/bottle.jpg" alt="" style="width: 4%;" />
+            }
+            @if ((int)ViewBag.aveNumWeeklyDrinks != 0)
+            {
+                <img src="~/Content/Images/fallen-bottle.jpg" alt="" style="width: 8%;" />
+            }
+
+            @ViewBag.aveNumWeeklyDrinks&nbsp;drinks!
+        </h1>
+        <h3>The average number of drinks you reported drinking per week was @ViewBag.aveNumWeeklyDrinks.</h3>
+    </div>
+
+    <div class="clearfix">
+        <div class="col-xs-6 orange section gender">
+            @if (ViewBag.gender == "male")
+            {
+                <img src="~/Content/Images/male.jpg" alt="Male" />
+            }
+            else
+            {
+                <img src="~/Content/Images/female.jpg" alt="Female" />
+            }
+            <h3>The typical @ViewBag.gender consumes @ViewBag.typicalDrinksPerWeek drinks per week.</h3>
+        </div>
+        <div class="col-xs-6 section">
+            <div class="circle text-center">
+                @ViewBag.drinkMoreThanPercent%
+            </div>
+            <h3>@ViewBag.drinkMoreThanPercentMsg</h3>
+        </div>
+    </div>
+
+    <a href="@Url.Action("Module3")">Click to continue</a>
+
+</div>

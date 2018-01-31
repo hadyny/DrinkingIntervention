@@ -1,0 +1,62 @@
+﻿
+
+   @{
+       Layout = "~/Views/Shared/_ModuleLayout.cshtml";
+}
+
+<div class="module">
+    <div class="title">
+        <h3>University Students'</h3>
+        <h1>Alcohol use and you!</h1>
+    </div>
+
+    <div class="light-orange section">
+        <h1>Compared to other first years</h1>
+        <div class="row">
+            <div class="col-xs-6">
+                <table class="table">
+                    @for (int i = 0; i < 10; i++)
+                    {
+                        <tr>
+                            <th>@((10 - i) * 10)</th>
+                            @for (int j = 10; j > 0; j--)
+                            {
+                                if ((i * 10) + j <= (100 - (int)ViewBag.drinkMoreThanFirstYearPercent))
+                                {
+                                    <td><img src="~/Content/Images/little-grey-person.jpg" alt="" /></td>
+                                }
+                                else
+                                {
+                                    <td><img src="~/Content/Images/little-black-person.jpg" alt="" /></td>
+                                }
+                            }
+                        </tr>
+                    }
+                </table>
+            </div>
+            <div class="col-xs-6">
+                <h3>@ViewBag.drinkMoreThanFirstYearPercentMsg</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="section clearfix">
+        <div class="col-xs-6">
+            <img src="~/Content/Images/stethescope.jpg" alt="Stethescope" />
+        </div>
+        <div class="col-xs-6">
+            <h4>
+                Based on your recent history, you report drinking on @ViewBag.daysDrinkingPercent% of days.
+            </h4>
+            <h4>
+                If you continue to drink as you do now, you will spend between $@ViewBag.lowSpend and $@ViewBag.highSpend, depending where you drink (bar vs. home).
+            </h4>
+            <h4>
+                You also consumed, on average, @ViewBag.numCalories added calories per week from alcohol.
+            </h4>
+        </div>
+    </div>
+
+    <a href="@Url.Action("Module4")">Click to continue</a>
+
+</div>

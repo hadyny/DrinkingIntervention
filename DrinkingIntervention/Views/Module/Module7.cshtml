@@ -1,0 +1,134 @@
+﻿@{
+    Layout = "~/Views/Shared/_ModuleLayout.cshtml";
+}
+
+<div class="module">
+    <div class="title">
+        <h3>Where do I fit in?</h3>
+        <h1>Largest drinking session</h1>
+    </div>
+
+    <div class="light-orange section bac-values">
+        <h3>
+            Click on the BAC values below to see the typical behavioural and physical effects of
+            different BAC levels for non-tolerant drinkers.
+        </h3>
+        <div class="clearfix">
+            <div class="col-xs-2">
+                <div class="circle text-center js-bac04">
+                    0.04
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="circle text-center js-bac09">
+                    0.09
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="circle text-center js-bac14">
+                    0.14
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="circle text-center js-bac24">
+                    0.24
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="circle text-center js-bac34">
+                    0.34
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <div class="circle text-center js-bac35">
+                    0.35+
+                </div>
+            </div>
+        </div>
+        <h3 class="js-bac-description"></h3>
+        <div class="js-bac-desc-image">
+            <img src="" alt="" />
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>
+            To reduce your risk of injury from drinking, the <a href="http://www.hpa.org.nz/" target="_blank">NZ Health Promotion Agency</a> recommends
+            no more than @ViewBag.maxDrinks drinks per session. Staying at this limit will keep your BAC at a safer level
+        </h3>
+    </div>
+
+    <a href="@Url.Action("Module8")">Click to continue</a>
+</div>
+
+@section Scripts {
+
+
+
+    <script>
+        document.querySelector('.js-bac04').addEventListener('click', function () {
+            document.querySelector('.js-bac-description').textContent = 'A BAC of 0.01-0.04 may induce a slight feeling of relaxation, slight mood elevation, and an increase in talkativeness.';
+            document.querySelector('.js-bac-desc-image img').src = '@Url.Content("~/Content/Images/black-cup.png")';
+            document.querySelector('.js-bac04').classList.add('selected');
+            document.querySelector('.js-bac09').classList.remove('selected');
+            document.querySelector('.js-bac14').classList.remove('selected');
+            document.querySelector('.js-bac24').classList.remove('selected');
+            document.querySelector('.js-bac34').classList.remove('selected');
+            document.querySelector('.js-bac35').classList.remove('selected');
+        });
+        document.querySelector('.js-bac09').addEventListener('click', function () {
+            document.querySelector('.js-bac-description').textContent = 'A BAC of 0.05-0.09 may lower alertness, impair sensory motor functioning, impair reasoning and judgement. These can lead to exaggerated behaviours, poor decision making, and poor reasoning in conversation.';
+            document.querySelector('.js-bac-desc-image img').src = '@Url.Content("~/Content/Images/black-impaired-people.png")';
+            document.querySelector('.js-bac04').classList.remove('selected');
+            document.querySelector('.js-bac09').classList.add('selected');
+            document.querySelector('.js-bac14').classList.remove('selected');
+            document.querySelector('.js-bac24').classList.remove('selected');
+            document.querySelector('.js-bac34').classList.remove('selected');
+            document.querySelector('.js-bac35').classList.remove('selected');
+        });
+        document.querySelector('.js-bac14').addEventListener('click', function () {
+            document.querySelector('.js-bac-description').textContent = 'A BAC of 0.10-0.14 will significantly impact your reaction time, impair your senses (touch, taste, smell, vision, hearing) and impact your short term memory. These impairments can lead to loud talking, poor focus, unexplained bruises, and repetitive conversations.';
+            document.querySelector('.js-bac-desc-image img').src = '@Url.Content("~/Content/Images/black-falling-person.png")';
+            document.querySelector('.js-bac04').classList.remove('selected');
+            document.querySelector('.js-bac09').classList.remove('selected');
+            document.querySelector('.js-bac14').classList.add('selected');
+            document.querySelector('.js-bac24').classList.remove('selected');
+            document.querySelector('.js-bac34').classList.remove('selected');
+            document.querySelector('.js-bac35').classList.remove('selected');
+        });
+        document.querySelector('.js-bac24').addEventListener('click', function () {
+            document.querySelector('.js-bac-description').textContent = 'A BAC of 0.15-0.24 will typically lead to blurred vision, lack of motor skills, and sedation. These impairments will significantly impact your ability to have a conversation, lead to slow reactions to requests, and may severely impair motor coordination (staggering).';
+            document.querySelector('.js-bac-desc-image img').src = '@Url.Content("~/Content/Images/black-injured-person.png")';
+            document.querySelector('.js-bac04').classList.remove('selected');
+            document.querySelector('.js-bac09').classList.remove('selected');
+            document.querySelector('.js-bac14').classList.remove('selected');
+            document.querySelector('.js-bac24').classList.add('selected');
+            document.querySelector('.js-bac34').classList.remove('selected');
+            document.querySelector('.js-bac35').classList.remove('selected');
+        });
+        document.querySelector('.js-bac34').addEventListener('click', function () {
+            document.querySelector('.js-bac-description').textContent = 'A BAC of 0.25-0.34 will lead to an increased pain threshold, impaired consciousness, disorientation, decreased muscle coordination, loss of motor functions, depressed reflexes, and impairment of circulation and respiration. This can lead to… urinating on yourself. Slurred speech, exaggerated emotional states, or an inability to talk or move.';
+            document.querySelector('.js-bac-desc-image img').src = '@Url.Content("~/Content/Images/black-brain-head.png")';
+            document.querySelector('.js-bac04').classList.remove('selected');
+            document.querySelector('.js-bac09').classList.remove('selected');
+            document.querySelector('.js-bac14').classList.remove('selected');
+            document.querySelector('.js-bac24').classList.remove('selected');
+            document.querySelector('.js-bac34').classList.add('selected');
+            document.querySelector('.js-bac35').classList.remove('selected');
+        });
+        document.querySelector('.js-bac35').addEventListener('click', function () {
+            document.querySelector('.js-bac-description').textContent = 'A BAC of 0.35 or over can lead to some serious concerns. Alcohol depresses the brain, slowing down breathing and heartbeat and sometime leading to unconsciousness and coma.';
+            document.querySelector('.js-bac-desc-image img').src = '@Url.Content("~/Content/Images/black-heart.png")';
+            document.querySelector('.js-bac04').classList.remove('selected');
+            document.querySelector('.js-bac09').classList.remove('selected');
+            document.querySelector('.js-bac14').classList.remove('selected');
+            document.querySelector('.js-bac24').classList.remove('selected');
+            document.querySelector('.js-bac34').classList.remove('selected');
+            document.querySelector('.js-bac35').classList.add('selected');
+        });
+
+        @if (ViewBag.selectedCircle != null) {
+            <text>document.querySelector('.@ViewBag.selectedCircle').click();</text>
+        }
+    </script>
+}
